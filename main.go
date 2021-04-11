@@ -3,8 +3,11 @@ package main
 import "fmt"
 
 func main() {
-	card := "ace of spades/туз пик"      //var card string = "ace of spades" //initialize var
-	card = "five of diamonds/пять бубей" //redefine var
+	card := newCard()
 	fmt.Println(card)
 
+}
+
+func newCard() string {
+	return "Five of diamonds/пять бубей"
 }
