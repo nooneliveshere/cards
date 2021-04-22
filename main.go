@@ -1,11 +1,10 @@
 package main
 
 func main() {
-	card := deck{"ace of diaomonds", newCard()}
-	card = append(card, "six of spades")
-	card.printcards()
-}
+	carder := newDeck()
+	carder = append(carder, "ace of spades")
 
-func newCard() string {
-	return "Five of diamonds/пять бубей"
+	hand, remainCards := deal(carder, 2)
+	hand.printcards()
+	remainCards.printcards()
 }
